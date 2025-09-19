@@ -1,0 +1,27 @@
+/* Mobile sidebar mặc định ẩn bên trái */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* ẩn hoàn toàn */
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.show {
+    left: 0; /* slide vào khi mobileOpen = true */
+  }
+
+  /* Overlay */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 998;
+  }
+}
